@@ -3,8 +3,12 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+	
 };
+
+export const baseUrl = 'https://localhost:4200/';
+export const apiUrl= 'https://jsonplaceholder.typicode.com/'
 
 /*
  * For easier debugging in development mode, you can import the following file

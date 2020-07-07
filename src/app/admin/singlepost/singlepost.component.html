@@ -1,0 +1,28 @@
+<div *ngIf="postdata">
+	<div class="card" >
+		<div class="card-header card-header-primary">{{ postdata.title }}</div>
+		<div class="card-body">
+			{{ postdata.body }}
+		</div>
+	</div>
+</div>
+
+<div *ngIf="commentList">
+	<h3>Comments</h3>
+	<div class="card mt-1 mb-2" *ngFor="let items of commentList">
+		<div class="card-body">
+			<div class="media">
+			  <svg class="bd-placeholder-img mr-3" width="64" height="64" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 64x64"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect><text x="50%" y="50%" fill="#dee2e6" dy=".3em">64x64</text></svg>
+			  <div class="media-body">
+			    <h5 class="mt-0"><strong class="mr-2">{{ items.name }}</strong> <a [href]="'mailto:'+items.email">{{ items.email }}</a></h5>
+			   	{{ items.body }}
+			  </div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<div class="text-center">
+	<ngx-ui-loader fgsType="square-jelly-box" pbColor="#9c27b0" fgsColor="#9c27b0" overlayColor="rgba(255,255,255,0.8)" bgsOpacity="0.7"></ngx-ui-loader>
+</div>

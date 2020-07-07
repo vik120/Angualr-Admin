@@ -1,0 +1,16 @@
+        <div class="container-fluid">
+          <div class="row">
+            
+			<div class="col-md-3" *ngFor="let item of gallerylist  | paginate: { itemsPerPage: 10, currentPage: p }">
+              
+			  <app-card [title]="item.title" [thumbnail]="item.thumbnailUrl" [image]="item.url"></app-card>
+			  
+            </div>
+			
+             
+          </div>
+		  
+		  <pagination-controls (pageChange)="p = $event"></pagination-controls>
+        </div>
+		
+		<ngx-ui-loader fgsType="square-jelly-box" pbColor="#9c27b0" fgsColor="#9c27b0" overlayColor="rgba(255,255,255,0.8)" bgsOpacity="0.7"></ngx-ui-loader>
